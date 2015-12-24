@@ -4,6 +4,12 @@ Cron backup creation and upload
 
 At the moment it dumps mongodb databases to dropbox.
 
+##0) Requirements
+
+The upload scripts are written in PHP, so to get it working you'll need to:
+
+``apt-get install php5-cli php5-json php5-curl``
+
 ##1) Insert your credentials
 
 ``cp upload/dropbox.json.sample upload/dropbox.json``
