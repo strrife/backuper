@@ -79,7 +79,7 @@ class DropboxUploadService extends UploadService {
         $authStuff = json_decode(file_get_contents($this->getAuthFilePath()));
         $dbxClient = new \Dropbox\Client($authStuff->token, "PHP-Example/1.0");
         $f = fopen($file, "rb");
-        $dbxClient->uploadFile('/' . basename($file), \Dropbox\WriteMode::add(), $f);
+        $dbxClient->uploadFile('/' . basename($file), \Dropbox\WriteMode::force(), $f);
     }
 
     protected function getName()
