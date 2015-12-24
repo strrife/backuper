@@ -25,3 +25,4 @@ mongodump --db "$DB" -o "$HOME_DIR"/backups/mongo_"$BKPDATE"
 zip -r "$HOME_DIR"/backups/mongo_"$BKPDATE".zip "$HOME_DIR"/backups/mongo_"$BKPDATE"
 rm -rf "$HOME_DIR"/backups/mongo_"$BKPDATE"
 php "$HOME_DIR"/upload/upload.php dropbox "$HOME_DIR"/backups/mongo_"$BKPDATE".zip
+rm -f "$HOME_DIR"/backups/mongo_"$BKPDATE".zip
